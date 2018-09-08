@@ -2,7 +2,7 @@ import typing as t
 
 from abc import ABC, abstractmethod
 
-from sevenwonders.resources import resource
+from sevenwonders.game.resources import resource
 from sevenwonders.utilities.containers import HashableMultiset
 
 
@@ -77,3 +77,15 @@ class Cost(object):
 			isinstance(other, self.__class__)
 			and self._atoms == other._atoms
 		)
+	
+
+ONE_LUMBER = ResourceCostAtom(resource.LUMBER)
+ONE_STONE = ResourceCostAtom(resource.STONE)
+ONE_CLAY = ResourceCostAtom(resource.CLAY)
+ONE_ORE = ResourceCostAtom(resource.ORE)
+
+ONE_CLOTH = ResourceCostAtom(resource.CLOTH)
+ONE_GLASS = ResourceCostAtom(resource.GLASS)
+ONE_PAPER = ResourceCostAtom(resource.PAPER)
+
+ONE_COIN = CoinCostAtom()
